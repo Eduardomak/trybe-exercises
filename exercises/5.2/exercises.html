@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+/* Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+Adicione a tag div com a classe main-content como filho da tag body ;
+Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2. */
+      //1
+      const x = document.createElement('h1')
+      x.innerHTML = 'Exercício 5.2 - JavaScript DOM'
+      document.body.appendChild(x);
+      //2
+      const y = document.createElement('div');
+      y.className = 'main-content' 
+      document.body.appendChild(y)
+      //3
+      const z = document.createElement('div');
+      z.className = 'center-content'
+      y.appendChild(z);
+      //4
+      const h = document.createElement('p');
+      h.innerText = 'Um teste para o exercicio'
+      z.appendChild(h);
+      //5
+      const v = document.createElement('div')
+      v.className = 'left-content'
+      y.appendChild(v);
+      //6
+      const g = document.createElement('div');
+      g.className = 'right-content'
+      y.appendChild(g);
+      //7
+      const j = document.createElement('img');
+      j.src = 'https://picsum.photos/200'
+      j.className = 'small-image'
+      v.appendChild(j);
+      //8
+      const k = document.createElement('ul')
+      g.appendChild(k)
+      let l = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+      for (let index = 0; index < l.length; l += 1) {
+        let s = document.createElement('li')
+        k.appendChild(s)
+      }
+    </script>
+  </body>
+</html>
